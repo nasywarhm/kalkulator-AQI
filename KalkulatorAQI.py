@@ -116,21 +116,6 @@ def main():
                 st.subheader(f'Nilai AQI yang dihitung adalah: {aqi_value}')
                 st.markdown(f'<p style="color: {aqi_color}; font-size: large;">{aqi_description}</p>', unsafe_allow_html=True)
     
-                # Menampilkan informasi tambahan berdasarkan rentang nilai AQI
-                st.subheader('Kondisi berdasarkan nilai AQI:')
-                if aqi_value <= 50:
-                    st.markdown("Kualitas udara baik; tidak ada atau sedikit risiko bagi kesehatan.")
-                elif aqi_value <= 100:
-                    st.markdown("Kualitas udara sedang; risiko kesehatan bagi kelompok sensitif.")
-                elif aqi_value <= 150:
-                    st.markdown("Kualitas udara tidak sehat bagi kelompok sensitif.")
-                elif aqi_value <= 200:
-                    st.markdown("Kualitas udara tidak sehat; bagi semua orang dapat terpengaruh.")
-                elif aqi_value <= 300:
-                    st.markdown("Kualitas udara sangat tidak sehat; efek serius pada kesehatan.")
-                else:
-                    st.markdown("Kualitas udara berbahaya; risiko kesehatan darurat.")
-                    
                 st.image("imgweb/aqi.png", use_column_width=True)
                     
 if __name__ == '__main__':
